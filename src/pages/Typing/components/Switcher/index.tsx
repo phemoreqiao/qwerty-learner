@@ -6,7 +6,7 @@ import LoopWordSwitcher from '../LoopWordSwitcher'
 import Setting from '../Setting'
 import SoundSwitcher from '../SoundSwitcher'
 import WordDictationSwitcher from '../WordDictationSwitcher'
-import Tooltip from '@/components/Tooltip'
+import ControlTile from '@/components/ControlTile'
 import { isOpenDarkModeAtom } from '@/store'
 import { CTRL } from '@/utils'
 import { useAtom } from 'jotai'
@@ -41,19 +41,19 @@ export default function Switcher() {
   )
 
   return (
-    <div className="flex items-center justify-center gap-2">
-      <Tooltip content="音效设置">
+    <div className="practice-controls-grid">
+      <ControlTile label="音效设置">
         <SoundSwitcher />
-      </Tooltip>
+      </ControlTile>
 
-      <Tooltip className="h-7 w-7" content="设置单个单词循环">
+      <ControlTile label="单词循环">
         <LoopWordSwitcher />
-      </Tooltip>
+      </ControlTile>
 
-      <Tooltip className="h-7 w-7" content={`开关默写模式（${CTRL} + V）`}>
+      <ControlTile label="默写模式" shortcut={`${CTRL} + V`}>
         <WordDictationSwitcher />
-      </Tooltip>
-      <Tooltip className="h-7 w-7" content={`开关释义显示（${CTRL} + Shift + V）`}>
+      </ControlTile>
+      <ControlTile label="释义显示" shortcut={`${CTRL} + Shift + V`}>
         <button
           className={`p-[2px] ${state?.isTransVisible ? 'text-brand-500' : 'text-gray-500'} text-lg focus:outline-none`}
           type="button"
@@ -65,17 +65,17 @@ export default function Switcher() {
         >
           {state?.isTransVisible ? <IconLanguage /> : <IconLanguageOff />}
         </button>
-      </Tooltip>
+      </ControlTile>
 
-      <Tooltip content="错题本">
+      <ControlTile label="错题本">
         <ErrorBookButton />
-      </Tooltip>
+      </ControlTile>
 
-      <Tooltip className="h-7 w-7" content="查看数据统计">
+      <ControlTile label="数据统计">
         <AnalysisButton />
-      </Tooltip>
+      </ControlTile>
 
-      <Tooltip className="h-7 w-7" content="开关深色模式">
+      <ControlTile label={isOpenDarkMode ? '切换浅色模式' : '切换深色模式'}>
         <button
           className={`p-[2px] text-lg text-brand-500 focus:outline-none`}
           type="button"
@@ -87,13 +87,13 @@ export default function Switcher() {
         >
           {isOpenDarkMode ? <IconMoon className="icon" /> : <IconSun className="icon" />}
         </button>
-      </Tooltip>
-      <Tooltip className="h-7 w-7" content="指法图示">
+      </ControlTile>
+      <ControlTile label="指法图示">
         <HandPositionIllustration></HandPositionIllustration>
-      </Tooltip>
-      <Tooltip content="设置">
+      </ControlTile>
+      <ControlTile label="更多设置">
         <Setting />
-      </Tooltip>
+      </ControlTile>
     </div>
   )
 }

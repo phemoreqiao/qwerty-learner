@@ -36,7 +36,7 @@ export default function Setting() {
         className={`flex items-center justify-center rounded p-[2px] text-lg text-brand-500 outline-none transition-colors duration-300 ease-in-out hover:bg-brand-400 hover:text-white  ${
           isOpen && 'bg-brand-500 text-white'
         }`}
-        title="打开设置对话框"
+        aria-label="打开设置对话框"
       >
         <IconCog6Tooth className="icon" />
       </button>
@@ -69,8 +69,13 @@ export default function Setting() {
                 <Dialog.Panel className="flex w-200 flex-col overflow-hidden rounded-2xl bg-white p-0 shadow-xl dark:bg-gray-800">
                   <div className="relative flex h-22 items-end justify-between rounded-t-lg border-b border-neutral-100 bg-stone-50 px-6 py-3 dark:border-neutral-700 dark:bg-gray-900">
                     <span className="text-3xl font-bold text-gray-600">设置</span>
-                    <button type="button" onClick={() => setIsOpen(false)} title="关闭对话框">
-                      <IconX className="absolute right-7 top-5 cursor-pointer text-gray-400" />
+                    <button
+                      type="button"
+                      onClick={() => setIsOpen(false)}
+                      aria-label="关闭设置"
+                      className="absolute right-5 top-4 flex h-8 w-8 items-center justify-center rounded-lg text-gray-400 hover:bg-gray-100 dark:hover:bg-gray-700"
+                    >
+                      <IconX className="h-5 w-5" />
                     </button>
                   </div>
 

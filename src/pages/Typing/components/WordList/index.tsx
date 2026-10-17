@@ -20,7 +20,7 @@ const currentDictTitle = atom((get) => {
   }
 })
 
-export default function WordList() {
+export default function WordList({ inline = false }: { inline?: boolean }) {
   // eslint-disable-next-line  @typescript-eslint/no-non-null-assertion
   const { state, dispatch } = useContext(TypingContext)!
 
@@ -38,15 +38,22 @@ export default function WordList() {
 
   return (
     <>
-      <Tooltip content="List" placement="top" className="!absolute left-5 top-[50%] z-20">
-        <button
-          type="button"
-          onClick={openModal}
-          className="fixed left-0 top-[50%] z-20 rounded-lg rounded-l-none bg-brand-50 px-2 py-3 text-lg hover:bg-brand-200 focus:outline-none dark:bg-brand-900 dark:hover:bg-brand-800"
-        >
-          <ListIcon className="h-6 w-6 text-lg text-brand-500 dark:text-white" />
+      {inline ? (
+        <button type="button" onClick={openModal} className="practice-secondary">
+          <ListIcon />
+          <span>本章单词</span>
         </button>
-      </Tooltip>
+      ) : (
+        <Tooltip content="List" placement="top" className="!absolute left-5 top-[50%] z-20">
+          <button
+            type="button"
+            onClick={openModal}
+            className="fixed left-0 top-[50%] z-20 rounded-lg rounded-l-none bg-brand-50 px-2 py-3 text-lg hover:bg-brand-200 focus:outline-none dark:bg-brand-900 dark:hover:bg-brand-800"
+          >
+            <ListIcon className="h-6 w-6 text-lg text-brand-500 dark:text-white" />
+          </button>
+        </Tooltip>
+      )}
 
       <Drawer open={isOpen} onClose={closeModal} classNames="bg-stone-50 dark:bg-gray-900">
         <Dialog.Title as="h3" className="flex items-center justify-between p-4 text-lg font-medium leading-6 dark:text-gray-50">

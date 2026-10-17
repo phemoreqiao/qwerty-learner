@@ -16,7 +16,7 @@ const AnalysisButton = () => {
       type="button"
       onClick={toAnalysis}
       className={`flex items-center justify-center rounded p-[2px] text-lg text-brand-500 outline-none transition-colors duration-300 ease-in-out hover:bg-brand-400 hover:text-white`}
-      title="查看数据统计"
+      aria-label="查看数据统计"
     >
       <ChartPie className="icon" />
     </button>

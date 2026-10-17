@@ -9,10 +9,10 @@ import WordList from './components/WordList'
 import WordPanel from './components/WordPanel'
 import { useConfetti } from './hooks/useConfetti'
 import { useWordList } from './hooks/useWordList'
+import './layout.css'
 import { TypingContext, TypingStateActionType, initialState, typingReducer } from './store'
 import { DonateCard } from '@/components/DonateCard'
 import Header from '@/components/Header'
-import Tooltip from '@/components/Tooltip'
 import { idDictionaryMap } from '@/resources/dictionary'
 import { currentChapterAtom, currentDictIdAtom, isReviewModeAtom, randomConfigAtom, reviewModeInfoAtom } from '@/store'
 import { IsDesktop, isLegal } from '@/utils'
@@ -130,42 +130,54 @@ const App: React.FC = () => {
     <TypingContext.Provider value={{ state: state, dispatch }}>
       {state.isFinished && <DonateCard />}
       {state.isFinished && <ResultScreen />}
-      <Layout>
-        <Header>
-          <DictChapterButton />
-          <PronunciationSwitcher />
-          <Switcher />
-          <StartButton isLoading={isLoading} />
-          <Tooltip content="跳过该词">
-            <button
-              className={`${
-                state.isShowSkip ? 'bg-orange-400' : 'invisible w-0 bg-gray-300 px-0 opacity-0'
-              } my-btn-primary transition-all duration-300 `}
-              onClick={skipWord}
-            >
-              Skip
-            </button>
-          </Tooltip>
-        </Header>
-        <div className="container mx-auto flex h-full flex-1 flex-col items-center justify-center pb-5">
-          <div className="container relative mx-auto flex h-full flex-col items-center">
-            <div className="container flex flex-grow items-center justify-center">
+      <Layout className="practice-layout">
+        <div className="practice-workspace">
+          <Header layout="practice">
+            <section aria-labelledby="practice-selection-title">
+              <h2 id="practice-selection-title" className="practice-section-title">
+                选择练习内容
+              </h2>
+              <div className="practice-selectors">
+                <DictChapterButton />
+                <PronunciationSwitcher />
+              </div>
+            </section>
+            <section aria-labelledby="practice-tools-title">
+              <h2 id="practice-tools-title" className="practice-section-title">
+                练习设置
+              </h2>
+              <Switcher />
+            </section>
+            <StartButton isLoading={isLoading}>
+              <WordList inline />
+            </StartButton>
+            {state.isShowSkip && (
+              <button type="button" className="practice-secondary" onClick={skipWord}>
+                跳过当前单词
+              </button>
+            )}
+          </Header>
+          <section className="practice-stage" aria-label="单词练习区">
+            <div className="practice-stage-heading">
+              <h2>单词练习</h2>
+              <span className={state.isTyping ? 'practice-status is-active' : 'practice-status'}>
+                <span aria-hidden="true" />
+                {isLoading ? '正在加载' : state.isTyping ? '练习中' : state.timerData.time ? '已暂停' : '准备开始'}
+              </span>
+            </div>
+            <div className="practice-word-area">
               {isLoading ? (
-                <div className="flex flex-col items-center justify-center ">
-                  <div
-                    className="inline-block h-8 w-8 animate-spin rounded-full border-4 border-solid  border-brand-400 border-r-transparent align-[-0.125em] motion-reduce:animate-[spin_1.5s_linear_infinite]"
-                    role="status"
-                  ></div>
+                <div role="status" className="flex flex-1 items-center justify-center" aria-label="正在加载单词">
+                  <span className="inline-block h-8 w-8 animate-spin rounded-full border-4 border-solid border-brand-400 border-r-transparent" />
                 </div>
               ) : (
                 !state.isFinished && <WordPanel />
               )}
             </div>
             <Speed />
-          </div>
+          </section>
         </div>
       </Layout>
-      <WordList />
     </TypingContext.Provider>
   )
 }

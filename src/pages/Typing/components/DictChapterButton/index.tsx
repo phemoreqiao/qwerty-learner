@@ -1,4 +1,4 @@
-import Tooltip from '@/components/Tooltip'
+import ControlTile from '@/components/ControlTile'
 import { currentChapterAtom, currentDictInfoAtom, isReviewModeAtom } from '@/store'
 import range from '@/utils/range'
 import { Listbox, Transition } from '@headlessui/react'
@@ -20,16 +20,16 @@ export const DictChapterButton = () => {
   }
   return (
     <>
-      <Tooltip content="词典切换">
+      <ControlTile label="词典切换">
         <NavLink
           className="block rounded-lg px-3 py-1 text-lg transition-colors duration-300 ease-in-out hover:bg-brand-400 hover:text-white focus:outline-none dark:text-white dark:text-opacity-60 dark:hover:text-opacity-100"
           to="/gallery"
         >
           {currentDictInfo.name} {isReviewMode && '错题复习'}
         </NavLink>
-      </Tooltip>
+      </ControlTile>
       {!isReviewMode && (
-        <Tooltip content="章节切换">
+        <ControlTile label="章节切换">
           <Listbox value={currentChapter} onChange={setCurrentChapter}>
             <Listbox.Button
               onKeyDown={handleKeyDown}
@@ -56,7 +56,7 @@ export const DictChapterButton = () => {
               </Listbox.Options>
             </Transition>
           </Listbox>
-        </Tooltip>
+        </ControlTile>
       )}
     </>
   )
