@@ -5,7 +5,20 @@ module.exports = {
   theme: {
     extend: {
       colors: {
-        primary: '#6366f1',
+        primary: '#f37021',
+        brand: {
+          50: '#fff7ed',
+          100: '#ffedd5',
+          200: '#fed7aa',
+          300: '#fbb77b',
+          400: '#f58a45',
+          500: '#f37021',
+          600: '#cf5312',
+          700: '#a83f12',
+          800: '#863517',
+          900: '#6c2d17',
+          950: '#3b1409',
+        },
       },
       keyframes: {
         'accordion-down': {

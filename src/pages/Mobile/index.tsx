@@ -68,9 +68,9 @@ const MobilePage: React.FC = () => {
     <div className="flex w-screen flex-col bg-white lg:mx-auto lg:max-w-7xl">
       <header className="fixed left-0 right-0 top-0 z-50 flex items-center justify-between border-b border-gray-100/50 bg-white/80 px-6 py-6 backdrop-blur-xl lg:px-12">
         <div className="flex items-center">
-          <img src={logo} className="mr-4 h-10 w-10 lg:h-12 lg:w-12" alt="Qwerty Learner Logo" />
+          <img src={logo} className="mr-4 h-10 w-10 lg:h-12 lg:w-12" alt="键盘简笔画标志" />
           <div className="flex flex-col">
-            <h1 className="text-lg font-semibold tracking-tight text-indigo-500 lg:text-xl">Qwerty Learner</h1>
+            <h1 className="text-lg font-semibold tracking-tight text-brand-500 lg:text-xl">英语单词速练速记</h1>
             <span className="text-xs font-normal text-gray-500">官方网站</span>
           </div>
         </div>
@@ -113,7 +113,7 @@ const MobilePage: React.FC = () => {
         <div className="mx-auto max-w-7xl">
           <ol className="flex items-center space-x-2 text-sm text-gray-500" itemScope itemType="https://schema.org/BreadcrumbList">
             <li itemProp="itemListElement" itemScope itemType="https://schema.org/ListItem">
-              <a href="https://qwerty.kaiyi.cool/" className="transition-colors hover:text-indigo-600" itemProp="item">
+              <a href="https://qwerty.kaiyi.cool/" className="transition-colors hover:text-brand-600" itemProp="item">
                 <span itemProp="name">首页</span>
               </a>
               <meta itemProp="position" content="1" />
@@ -145,7 +145,7 @@ const MobilePage: React.FC = () => {
           {/* 主要内容 */}
           <div className="relative z-10 mx-auto w-full max-w-5xl px-6 py-24 text-center">
             {/* 官网标识 */}
-            <div className="mb-8 inline-flex items-center gap-2 rounded-full border border-indigo-100 bg-indigo-50 px-5 py-2.5 text-sm font-medium text-indigo-600">
+            <div className="mb-8 inline-flex items-center gap-2 rounded-full border border-brand-100 bg-brand-50 px-5 py-2.5 text-sm font-medium text-brand-600">
               <svg className="h-4 w-4" fill="none" stroke="currentColor" viewBox="0 0 24 24">
                 <path strokeLinecap="round" strokeLinejoin="round" strokeWidth="2" d="M9 12l2 2 4-4m6 2a9 9 0 11-18 0 9 9 0 0118 0z" />
               </svg>
@@ -154,9 +154,9 @@ const MobilePage: React.FC = () => {
 
             {/* 主标题 */}
             <h1 className="mb-8 text-5xl font-bold leading-[1.1] tracking-tight text-gray-900 sm:text-6xl lg:text-7xl" itemProp="name">
-              为<span className="text-indigo-500">键盘工作者</span>
+              为<span className="text-brand-500">键盘工作者</span>
               <br />
-              设计的<span className="text-indigo-500">英语学习软件</span>
+              设计的<span className="text-brand-500">英语学习软件</span>
             </h1>
 
             {/* 副标题 */}
@@ -226,7 +226,7 @@ const MobilePage: React.FC = () => {
                 <div
                   key={index}
                   className={`h-2 w-2 rounded-full transition-all duration-500 ${
-                    currentSlide === index ? 'w-8 bg-indigo-500' : 'bg-gray-300 hover:bg-indigo-300'
+                    currentSlide === index ? 'w-8 bg-brand-500' : 'bg-gray-300 hover:bg-brand-300'
                   }`}
                 />
               ))}
@@ -323,7 +323,7 @@ const MobilePage: React.FC = () => {
               />
             </div>
             <h2 className="mb-6 text-center text-4xl font-bold tracking-tight text-gray-900 lg:text-5xl xl:text-6xl">
-              核心功能，<span className="text-indigo-500">专业设计</span>
+              核心功能，<span className="text-brand-500">专业设计</span>
             </h2>
             <p className="mx-auto mb-16 max-w-3xl text-center text-xl font-light leading-relaxed text-gray-600">
               每一个细节都为了更好的在线英语学习体验而精心打磨，适合程序员、学生、上班族等所有键盘工作者快速提升英语打字速度和英语单词记忆能力
@@ -337,12 +337,12 @@ const MobilePage: React.FC = () => {
                       key={index}
                       className={`my-6 cursor-pointer rounded-2xl border px-8 py-8 transition-all duration-300 ${
                         activeIndex === index
-                          ? 'scale-[1.02] transform border-indigo-200 bg-indigo-50/50 shadow-xl'
+                          ? 'scale-[1.02] transform border-brand-200 bg-brand-50/50 shadow-xl'
                           : 'border-gray-200 bg-white/50 hover:scale-[1.01] hover:transform hover:border-gray-300 hover:bg-white hover:shadow-lg'
                       }`}
                       onClick={() => setActiveIndex(index)}
                     >
-                      <h3 className="mb-3 text-xl font-semibold text-indigo-500 lg:text-2xl">{item.title}</h3>
+                      <h3 className="mb-3 text-xl font-semibold text-brand-500 lg:text-2xl">{item.title}</h3>
                       <p className="text-base font-light leading-relaxed text-gray-600 lg:text-lg">{item.description}</p>
                     </div>
                   )
@@ -363,8 +363,8 @@ const MobilePage: React.FC = () => {
               <div className="grid gap-6 sm:grid-cols-2 lg:grid-cols-3">
                 {/* 音标显示与发音 */}
                 <div className="rounded-2xl border border-gray-200 bg-white p-6 shadow-lg transition-all duration-300 hover:shadow-xl sm:p-8">
-                  <div className="mb-4 inline-flex items-center justify-center rounded-full bg-indigo-100 p-3">
-                    <svg className="h-6 w-6 text-indigo-600" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                  <div className="mb-4 inline-flex items-center justify-center rounded-full bg-brand-100 p-3">
+                    <svg className="h-6 w-6 text-brand-600" fill="none" stroke="currentColor" viewBox="0 0 24 24">
                       <path
                         strokeLinecap="round"
                         strokeLinejoin="round"
@@ -381,8 +381,8 @@ const MobilePage: React.FC = () => {
 
                 {/* 默写模式 */}
                 <div className="rounded-2xl border border-gray-200 bg-white p-6 shadow-lg transition-all duration-300 hover:shadow-xl sm:p-8">
-                  <div className="mb-4 inline-flex items-center justify-center rounded-full bg-indigo-100 p-3">
-                    <svg className="h-6 w-6 text-indigo-600" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                  <div className="mb-4 inline-flex items-center justify-center rounded-full bg-brand-100 p-3">
+                    <svg className="h-6 w-6 text-brand-600" fill="none" stroke="currentColor" viewBox="0 0 24 24">
                       <path
                         strokeLinecap="round"
                         strokeLinejoin="round"
@@ -399,8 +399,8 @@ const MobilePage: React.FC = () => {
 
                 {/* 速度统计 */}
                 <div className="rounded-2xl border border-gray-200 bg-white p-6 shadow-lg transition-all duration-300 hover:shadow-xl sm:p-8">
-                  <div className="mb-4 inline-flex items-center justify-center rounded-full bg-indigo-100 p-3">
-                    <svg className="h-6 w-6 text-indigo-600" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                  <div className="mb-4 inline-flex items-center justify-center rounded-full bg-brand-100 p-3">
+                    <svg className="h-6 w-6 text-brand-600" fill="none" stroke="currentColor" viewBox="0 0 24 24">
                       <path
                         strokeLinecap="round"
                         strokeLinejoin="round"
@@ -417,8 +417,8 @@ const MobilePage: React.FC = () => {
 
                 {/* 肌肉记忆 */}
                 <div className="rounded-2xl border border-gray-200 bg-white p-6 shadow-lg transition-all duration-300 hover:shadow-xl sm:p-8">
-                  <div className="mb-4 inline-flex items-center justify-center rounded-full bg-indigo-100 p-3">
-                    <svg className="h-6 w-6 text-indigo-600" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                  <div className="mb-4 inline-flex items-center justify-center rounded-full bg-brand-100 p-3">
+                    <svg className="h-6 w-6 text-brand-600" fill="none" stroke="currentColor" viewBox="0 0 24 24">
                       <path strokeLinecap="round" strokeLinejoin="round" strokeWidth="2" d="M13 10V3L4 14h7v7l9-11h-7z" />
                     </svg>
                   </div>
@@ -430,8 +430,8 @@ const MobilePage: React.FC = () => {
 
                 {/* 错误纠正 */}
                 <div className="rounded-2xl border border-gray-200 bg-white p-6 shadow-lg transition-all duration-300 hover:shadow-xl sm:p-8">
-                  <div className="mb-4 inline-flex items-center justify-center rounded-full bg-indigo-100 p-3">
-                    <svg className="h-6 w-6 text-indigo-600" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                  <div className="mb-4 inline-flex items-center justify-center rounded-full bg-brand-100 p-3">
+                    <svg className="h-6 w-6 text-brand-600" fill="none" stroke="currentColor" viewBox="0 0 24 24">
                       <path
                         strokeLinecap="round"
                         strokeLinejoin="round"
@@ -448,8 +448,8 @@ const MobilePage: React.FC = () => {
 
                 {/* 多平台支持 */}
                 <div className="rounded-2xl border border-gray-200 bg-white p-6 shadow-lg transition-all duration-300 hover:shadow-xl sm:p-8">
-                  <div className="mb-4 inline-flex items-center justify-center rounded-full bg-indigo-100 p-3">
-                    <svg className="h-6 w-6 text-indigo-600" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                  <div className="mb-4 inline-flex items-center justify-center rounded-full bg-brand-100 p-3">
+                    <svg className="h-6 w-6 text-brand-600" fill="none" stroke="currentColor" viewBox="0 0 24 24">
                       <path
                         strokeLinecap="round"
                         strokeLinejoin="round"
@@ -473,7 +473,7 @@ const MobilePage: React.FC = () => {
           <div className="mx-auto max-w-7xl">
             <div className="mb-16 text-center">
               <h2 className="mb-6 text-4xl font-bold tracking-tight text-gray-900 lg:text-5xl xl:text-6xl">
-                丰富词库，<span className="text-indigo-500">应有尽有</span>
+                丰富词库，<span className="text-brand-500">应有尽有</span>
               </h2>
               <p className="mx-auto max-w-3xl text-xl font-light leading-relaxed text-gray-600">
                 涵盖 CET-4/6 四六级英语考试、雅思托福 GRE 考研英语、商务英语 BEC 考试以及专为程序员定制的 JavaScript/Java/Python
@@ -497,31 +497,31 @@ const MobilePage: React.FC = () => {
                 <h3 className="mb-4 text-lg font-semibold text-gray-900 sm:text-xl">考试必备词库</h3>
                 <div className="space-y-2 text-xs text-gray-600 sm:text-sm">
                   <div className="flex items-center gap-2">
-                    <span className="text-indigo-500">•</span>
+                    <span className="text-brand-500">•</span>
                     <span>CET-4 大学英语四级</span>
                   </div>
                   <div className="flex items-center gap-2">
-                    <span className="text-indigo-500">•</span>
+                    <span className="text-brand-500">•</span>
                     <span>CET-6 大学英语六级</span>
                   </div>
                   <div className="flex items-center gap-2">
-                    <span className="text-indigo-500">•</span>
+                    <span className="text-brand-500">•</span>
                     <span>TOEFL 托福考试词汇</span>
                   </div>
                   <div className="flex items-center gap-2">
-                    <span className="text-indigo-500">•</span>
+                    <span className="text-brand-500">•</span>
                     <span>IELTS 雅思考试词汇</span>
                   </div>
                   <div className="flex items-center gap-2">
-                    <span className="text-indigo-500">•</span>
+                    <span className="text-brand-500">•</span>
                     <span>GRE 研究生入学考试</span>
                   </div>
                   <div className="flex items-center gap-2">
-                    <span className="text-indigo-500">•</span>
+                    <span className="text-brand-500">•</span>
                     <span>GMAT 商学院入学考试</span>
                   </div>
                   <div className="flex items-center gap-2">
-                    <span className="text-indigo-500">•</span>
+                    <span className="text-brand-500">•</span>
                     <span>SAT 学术能力评估测试</span>
                   </div>
                 </div>
@@ -542,27 +542,27 @@ const MobilePage: React.FC = () => {
                 <h3 className="mb-4 text-lg font-semibold text-gray-900 sm:text-xl">学术专业词库</h3>
                 <div className="space-y-2 text-xs text-gray-600 sm:text-sm">
                   <div className="flex items-center gap-2">
-                    <span className="text-indigo-500">•</span>
+                    <span className="text-brand-500">•</span>
                     <span>考研英语核心词汇</span>
                   </div>
                   <div className="flex items-center gap-2">
-                    <span className="text-indigo-500">•</span>
+                    <span className="text-brand-500">•</span>
                     <span>专业四级英语 TEM-4</span>
                   </div>
                   <div className="flex items-center gap-2">
-                    <span className="text-indigo-500">•</span>
+                    <span className="text-brand-500">•</span>
                     <span>专业八级英语 TEM-8</span>
                   </div>
                   <div className="flex items-center gap-2">
-                    <span className="text-indigo-500">•</span>
+                    <span className="text-brand-500">•</span>
                     <span>高考英语必备词汇</span>
                   </div>
                   <div className="flex items-center gap-2">
-                    <span className="text-indigo-500">•</span>
+                    <span className="text-brand-500">•</span>
                     <span>中考英语重点词汇</span>
                   </div>
                   <div className="flex items-center gap-2">
-                    <span className="text-indigo-500">•</span>
+                    <span className="text-brand-500">•</span>
                     <span>人教版英语 3-9 年级</span>
                   </div>
                 </div>
@@ -583,33 +583,33 @@ const MobilePage: React.FC = () => {
                 <h3 className="mb-4 text-lg font-semibold text-gray-900 sm:text-xl">商务与多语言</h3>
                 <div className="space-y-2 text-xs text-gray-600 sm:text-sm">
                   <div className="flex items-center gap-2">
-                    <span className="text-indigo-500">•</span>
+                    <span className="text-brand-500">•</span>
                     <span>商务英语核心词汇</span>
                   </div>
                   <div className="flex items-center gap-2">
-                    <span className="text-indigo-500">•</span>
+                    <span className="text-brand-500">•</span>
                     <span>BEC 商务英语考试</span>
                   </div>
                   <div className="flex items-center gap-2">
-                    <span className="text-indigo-500">•</span>
+                    <span className="text-brand-500">•</span>
                     <span>王陆雅思王听力语料库</span>
                   </div>
                   <div className="flex items-center gap-2">
-                    <span className="text-indigo-500">•</span>
+                    <span className="text-brand-500">•</span>
                     <span>日语常见词 N1-N5</span>
                   </div>
                   <div className="flex items-center gap-2">
-                    <span className="text-indigo-500">•</span>
+                    <span className="text-brand-500">•</span>
                     <span>哈萨克语基础3000词</span>
                   </div>
                 </div>
               </div>
 
               {/* 程序员专属 */}
-              <div className="col-span-full rounded-2xl border border-indigo-200 bg-gradient-to-r from-indigo-50 to-purple-50 p-6 shadow-lg sm:p-8">
+              <div className="col-span-full rounded-2xl border border-brand-200 bg-gradient-to-r from-brand-50 to-brand-50 p-6 shadow-lg sm:p-8">
                 <div className="mb-8 text-center">
-                  <div className="mb-4 inline-flex items-center justify-center rounded-full bg-indigo-100 p-4">
-                    <svg className="h-8 w-8 text-indigo-600" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                  <div className="mb-4 inline-flex items-center justify-center rounded-full bg-brand-100 p-4">
+                    <svg className="h-8 w-8 text-brand-600" fill="none" stroke="currentColor" viewBox="0 0 24 24">
                       <path strokeLinecap="round" strokeLinejoin="round" strokeWidth="2" d="M10 20l4-16m4 4l4 4-4 4M6 16l-4-4 4-4" />
                     </svg>
                   </div>
@@ -663,7 +663,7 @@ const MobilePage: React.FC = () => {
                 </div>
 
                 <div className="mt-8 text-center">
-                  <span className="inline-flex items-center gap-2 rounded-full bg-indigo-100 px-6 py-2 text-sm font-medium text-indigo-600">
+                  <span className="inline-flex items-center gap-2 rounded-full bg-brand-100 px-6 py-2 text-sm font-medium text-brand-600">
                     <svg className="h-4 w-4" fill="none" stroke="currentColor" viewBox="0 0 24 24">
                       <path strokeLinecap="round" strokeLinejoin="round" strokeWidth="2" d="M13 10V3L4 14h7v7l9-11h-7z" />
                     </svg>
@@ -684,7 +684,7 @@ const MobilePage: React.FC = () => {
                 href="https://qwerty.kaiyi.cool/"
                 target="_blank"
                 rel="noopener noreferrer"
-                className="inline-flex items-center gap-2 rounded-full bg-indigo-600 px-8 py-4 font-semibold text-white transition-all duration-300 hover:bg-indigo-700 hover:shadow-lg"
+                className="inline-flex items-center gap-2 rounded-full bg-brand-600 px-8 py-4 font-semibold text-white transition-all duration-300 hover:bg-brand-700 hover:shadow-lg"
               >
                 <span>立即体验丰富词库</span>
                 <svg className="h-5 w-5" fill="none" stroke="currentColor" viewBox="0 0 24 24">
@@ -703,14 +703,14 @@ const MobilePage: React.FC = () => {
         >
           <div className="mx-auto max-w-7xl">
             <div className="mb-16 text-center">
-              <div className="mb-6 inline-flex items-center gap-3 rounded-full bg-indigo-100 px-6 py-3 text-indigo-600">
+              <div className="mb-6 inline-flex items-center gap-3 rounded-full bg-brand-100 px-6 py-3 text-brand-600">
                 <svg className="h-5 w-5" fill="none" stroke="currentColor" viewBox="0 0 24 24">
                   <path strokeLinecap="round" strokeLinejoin="round" strokeWidth="2" d="M10 20l4-16m4 4l4 4-4 4M6 16l-4-4 4-4" />
                 </svg>
                 <span className="font-semibold">For Coder</span>
               </div>
               <h2 className="mb-6 text-4xl font-bold tracking-tight text-white lg:text-5xl xl:text-6xl">
-                专为<span className="text-indigo-400">程序员</span>量身定制
+                专为<span className="text-brand-400">程序员</span>量身定制
               </h2>
               <p className="mx-auto max-w-3xl text-xl font-light leading-relaxed text-gray-300">
                 内置程序员工作常用技术英语单词词库，包括算法数据结构、设计模式、云计算等技术词汇，提高英语打字速度。同时支持
@@ -722,7 +722,7 @@ const MobilePage: React.FC = () => {
               {/* 左侧：技术词汇 */}
               <div className="rounded-2xl border border-gray-700 bg-gray-800/50 p-6 backdrop-blur-sm sm:p-8">
                 <div className="mb-6 flex items-center gap-4">
-                  <div className="rounded-full bg-indigo-600 p-3">
+                  <div className="rounded-full bg-brand-600 p-3">
                     <svg className="h-6 w-6 text-white" fill="none" stroke="currentColor" viewBox="0 0 24 24">
                       <path
                         strokeLinecap="round"
@@ -739,19 +739,19 @@ const MobilePage: React.FC = () => {
                 </p>
                 <div className="space-y-3">
                   <div className="flex items-center gap-3 rounded-lg bg-gray-700/50 p-3">
-                    <span className="text-indigo-400">•</span>
+                    <span className="text-brand-400">•</span>
                     <span className="text-gray-200">算法与数据结构词汇</span>
                   </div>
                   <div className="flex items-center gap-3 rounded-lg bg-gray-700/50 p-3">
-                    <span className="text-indigo-400">•</span>
+                    <span className="text-brand-400">•</span>
                     <span className="text-gray-200">软件架构与设计模式</span>
                   </div>
                   <div className="flex items-center gap-3 rounded-lg bg-gray-700/50 p-3">
-                    <span className="text-indigo-400">•</span>
+                    <span className="text-brand-400">•</span>
                     <span className="text-gray-200">项目管理与协作工具</span>
                   </div>
                   <div className="flex items-center gap-3 rounded-lg bg-gray-700/50 p-3">
-                    <span className="text-indigo-400">•</span>
+                    <span className="text-brand-400">•</span>
                     <span className="text-gray-200">云计算与 DevOps 术语</span>
                   </div>
                 </div>
@@ -794,8 +794,8 @@ const MobilePage: React.FC = () => {
             {/* 特色功能展示 */}
             <div className="mt-16 grid gap-8 md:grid-cols-3">
               <div className="text-center">
-                <div className="mb-4 inline-flex items-center justify-center rounded-full bg-indigo-600/20 p-4">
-                  <svg className="h-8 w-8 text-indigo-400" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                <div className="mb-4 inline-flex items-center justify-center rounded-full bg-brand-600/20 p-4">
+                  <svg className="h-8 w-8 text-brand-400" fill="none" stroke="currentColor" viewBox="0 0 24 24">
                     <path strokeLinecap="round" strokeLinejoin="round" strokeWidth="2" d="M13 10V3L4 14h7v7l9-11h-7z" />
                   </svg>
                 </div>
@@ -817,8 +817,8 @@ const MobilePage: React.FC = () => {
                 <p className="text-gray-300">专业技术词汇训练，提升阅读文档和交流能力</p>
               </div>
               <div className="text-center">
-                <div className="mb-4 inline-flex items-center justify-center rounded-full bg-purple-600/20 p-4">
-                  <svg className="h-8 w-8 text-purple-400" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                <div className="mb-4 inline-flex items-center justify-center rounded-full bg-brand-600/20 p-4">
+                  <svg className="h-8 w-8 text-brand-400" fill="none" stroke="currentColor" viewBox="0 0 24 24">
                     <path
                       strokeLinecap="round"
                       strokeLinejoin="round"
@@ -844,7 +844,7 @@ const MobilePage: React.FC = () => {
                   href="https://qwerty.kaiyi.cool/"
                   target="_blank"
                   rel="noopener noreferrer"
-                  className="inline-flex items-center gap-2 rounded-full bg-indigo-600 px-8 py-4 font-semibold text-white transition-all duration-300 hover:bg-indigo-700 hover:shadow-lg"
+                  className="inline-flex items-center gap-2 rounded-full bg-brand-600 px-8 py-4 font-semibold text-white transition-all duration-300 hover:bg-brand-700 hover:shadow-lg"
                 >
                   <span>体验程序员专属功能</span>
                   <svg className="h-5 w-5" fill="none" stroke="currentColor" viewBox="0 0 24 24">
@@ -887,7 +887,7 @@ const MobilePage: React.FC = () => {
                 <span className="font-semibold">荣誉成就</span>
               </div>
               <h2 className="mb-6 text-4xl font-bold tracking-tight text-gray-900 lg:text-5xl xl:text-6xl">
-                备受<span className="text-indigo-500">认可</span>的优质项目
+                备受<span className="text-brand-500">认可</span>的优质项目
               </h2>
               <p className="mx-auto max-w-3xl text-xl font-light leading-relaxed text-gray-600">
                 获得 GitHub 全球趋势榜第一名、V2EX 全站热搜、Gitee GVP 最有价值开源项目、少数派首页推荐等多个权威平台认可，成为 10 万+
@@ -983,8 +983,8 @@ const MobilePage: React.FC = () => {
                   </div>
 
                   <div className="flex items-center gap-3 rounded-lg border border-gray-100 bg-gray-50 p-3 sm:gap-4 sm:p-4">
-                    <div className="flex-shrink-0 rounded-full bg-purple-100 p-2">
-                      <svg className="h-5 w-5 text-purple-600" fill="currentColor" viewBox="0 0 20 20">
+                    <div className="flex-shrink-0 rounded-full bg-brand-100 p-2">
+                      <svg className="h-5 w-5 text-brand-600" fill="currentColor" viewBox="0 0 20 20">
                         <path d="M9.049 2.927c.3-.921 1.603-.921 1.902 0l1.07 3.292a1 1 0 00.95.69h3.462c.969 0 1.371 1.24.588 1.81l-2.8 2.034a1 1 0 00-.364 1.118l1.07 3.292c.3.921-.755 1.688-1.54 1.118l-2.8-2.034a1 1 0 00-1.175 0l-2.8 2.034c-.784.57-1.838-.197-1.539-1.118l1.07-3.292a1 1 0 00-.364-1.118L2.98 8.72c-.783-.57-.38-1.81.588-1.81h3.461a1 1 0 00.951-.69l1.07-3.292z" />
                       </svg>
                     </div>
@@ -1051,21 +1051,21 @@ const MobilePage: React.FC = () => {
             </div>
 
             {/* 用户数据统计 */}
-            <div className="mt-16 rounded-2xl border border-indigo-200 bg-gradient-to-r from-indigo-50 to-purple-50 p-6 text-center sm:p-8">
+            <div className="mt-16 rounded-2xl border border-brand-200 bg-gradient-to-r from-brand-50 to-brand-50 p-6 text-center sm:p-8">
               <h3 className="mb-6 text-xl font-bold text-gray-900 sm:mb-8 sm:text-2xl">用户信赖，数据说话</h3>
               <div className="grid grid-cols-1 gap-6 sm:grid-cols-3 sm:gap-8">
                 <div>
-                  <div className="mb-2 text-3xl font-bold text-indigo-600 sm:text-4xl">20000+</div>
+                  <div className="mb-2 text-3xl font-bold text-brand-600 sm:text-4xl">20000+</div>
                   <div className="text-sm text-gray-600 sm:text-base">GitHub Stars</div>
                   <div className="text-xs text-gray-500 sm:text-sm">获得开发者广泛认可</div>
                 </div>
                 <div>
-                  <div className="mb-2 text-3xl font-bold text-indigo-600 sm:text-4xl">100000+</div>
+                  <div className="mb-2 text-3xl font-bold text-brand-600 sm:text-4xl">100000+</div>
                   <div className="text-sm text-gray-600 sm:text-base">月活跃用户</div>
                   <div className="text-xs text-gray-500 sm:text-sm">持续使用的学习者</div>
                 </div>
                 <div>
-                  <div className="mb-2 text-3xl font-bold text-indigo-600 sm:text-4xl">100+</div>
+                  <div className="mb-2 text-3xl font-bold text-brand-600 sm:text-4xl">100+</div>
                   <div className="text-sm text-gray-600 sm:text-base">社区贡献者</div>
                   <div className="text-xs text-gray-500 sm:text-sm">共同完善项目</div>
                 </div>
@@ -1083,7 +1083,7 @@ const MobilePage: React.FC = () => {
                 href="https://qwerty.kaiyi.cool/"
                 target="_blank"
                 rel="noopener noreferrer"
-                className="inline-flex items-center gap-2 rounded-full bg-indigo-600 px-8 py-4 font-semibold text-white transition-all duration-300 hover:bg-indigo-700 hover:shadow-lg"
+                className="inline-flex items-center gap-2 rounded-full bg-brand-600 px-8 py-4 font-semibold text-white transition-all duration-300 hover:bg-brand-700 hover:shadow-lg"
               >
                 <span>立即加入用户群体</span>
                 <svg className="h-5 w-5" fill="none" stroke="currentColor" viewBox="0 0 24 24">
@@ -1110,7 +1110,7 @@ const MobilePage: React.FC = () => {
           </div>
           <div className="relative z-10 flex flex-col items-center justify-center px-6 text-center">
             <h2 className="mb-8 text-5xl font-bold leading-tight tracking-tight text-white lg:text-6xl xl:text-7xl">
-              立即开始<span className="text-indigo-300">体验</span>
+              立即开始<span className="text-brand-300">体验</span>
             </h2>
             <p className="mb-12 max-w-4xl text-xl font-light leading-relaxed text-white/80 lg:text-2xl">
               开始你的英语学习之旅，让每一次打字都成为进步

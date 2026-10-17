@@ -29,8 +29,8 @@ const HeatmapCharts: FC<HeatmapChartsProps> = ({ data, title }) => {
         colorScheme={isOpenDarkMode ? 'dark' : 'light'}
         data={data}
         theme={{
-          light: ['#f0f0f0', '#6366f1'],
-          dark: ['hsl(0, 0%, 22%)', '#818cf8'],
+          light: ['#f0f0f0', '#f37021'],
+          dark: ['hsl(0, 0%, 22%)', '#f58a45'],
         }}
         renderBlock={(block, activity) =>
           React.cloneElement(block, {

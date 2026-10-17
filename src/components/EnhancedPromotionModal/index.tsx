@@ -71,7 +71,7 @@ const EnhancedPromotionModal: React.FC = () => {
               leaveFrom="opacity-100 translate-y-0 sm:scale-100"
               leaveTo="opacity-0 translate-y-4 sm:translate-y-0 sm:scale-95"
             >
-              <Dialog.Panel className="dark:via-gray-850 relative transform overflow-hidden rounded-2xl border border-blue-200 bg-gradient-to-br from-white via-blue-50 to-indigo-100 p-0 text-left shadow-2xl transition-all dark:border-gray-700 dark:from-gray-800 dark:to-gray-900 sm:my-8 sm:w-full sm:max-w-xl">
+              <Dialog.Panel className="dark:via-gray-850 relative transform overflow-hidden rounded-2xl border border-blue-200 bg-gradient-to-br from-white via-blue-50 to-brand-100 p-0 text-left shadow-2xl transition-all dark:border-gray-700 dark:from-gray-800 dark:to-gray-900 sm:my-8 sm:w-full sm:max-w-xl">
                 {/* Header with close button */}
                 <div className="absolute right-4 top-4 z-10">
                   <button
@@ -88,10 +88,10 @@ const EnhancedPromotionModal: React.FC = () => {
                 <div className="px-8 pb-8 pt-10">
                   {/* Icon and title */}
                   <div className="mb-6 text-center">
-                    <div className="mx-auto mb-4 flex h-20 w-20 animate-pulse items-center justify-center rounded-full bg-gradient-to-r from-blue-500 to-purple-600 shadow-lg">
+                    <div className="mx-auto mb-4 flex h-20 w-20 animate-pulse items-center justify-center rounded-full bg-gradient-to-r from-brand-500 to-brand-600 shadow-lg">
                       <IconStar className="h-10 w-10 text-white" />
                     </div>
-                    <h3 className="bg-gradient-to-r from-blue-600 to-purple-600 bg-clip-text text-3xl font-bold text-transparent">
+                    <h3 className="bg-gradient-to-r from-brand-600 to-brand-600 bg-clip-text text-3xl font-bold text-transparent">
                       体验 QwertyLearner.ai
                     </h3>
 
@@ -150,7 +150,7 @@ const EnhancedPromotionModal: React.FC = () => {
                     <button
                       type="button"
                       onClick={handleTryNow}
-                      className="w-full transform rounded-lg bg-gradient-to-r from-blue-500 to-purple-600 px-8 py-4 text-lg font-bold text-white shadow-lg transition-all duration-200 hover:scale-105 hover:from-blue-600 hover:to-purple-700 hover:shadow-xl focus:outline-none focus:ring-2 focus:ring-blue-500 focus:ring-offset-2"
+                      className="w-full transform rounded-lg bg-gradient-to-r from-brand-500 to-brand-600 px-8 py-4 text-lg font-bold text-white shadow-lg transition-all duration-200 hover:scale-105 hover:from-brand-600 hover:to-brand-700 hover:shadow-xl focus:outline-none focus:ring-2 focus:ring-brand-500 focus:ring-offset-2"
                     >
                       🚀 立即体验 QwertyLearner.ai
                     </button>

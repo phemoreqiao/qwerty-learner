@@ -31,8 +31,8 @@ export default function DictRequest() {
           openState={showPanel}
           title="想要添加更多词典？"
           icon={IconBook2}
-          buttonClassName="bg-indigo-500 hover:bg-indigo-400"
-          iconClassName="text-indigo-500 bg-indigo-100 dark:text-indigo-300 dark:bg-indigo-500"
+          buttonClassName="bg-brand-500 hover:bg-brand-400"
+          iconClassName="text-brand-500 bg-brand-100 dark:text-brand-300 dark:bg-brand-500"
           onClose={onClosePanel}
         >
           <p className="text-sm text-gray-600 dark:text-gray-300">
@@ -49,7 +49,7 @@ export default function DictRequest() {
           </p>
 
           {/* 
-            <div className="rounded-lg bg-gradient-to-r from-blue-50 to-indigo-50 p-4 shadow-sm dark:from-gray-800 dark:to-gray-700">
+            <div className="rounded-lg bg-gradient-to-r from-brand-50 to-brand-50 p-4 shadow-sm dark:from-gray-800 dark:to-gray-700">
               <h4 className="mb-3 font-semibold text-gray-900 dark:text-white">🚀 尝试 QwertyLearner.ai</h4>
               <p className="mb-3 text-sm text-gray-600 dark:text-gray-300">
                 不会编程？想拥有自己的专属学习词典？操作简单，一键上传，点击即用
@@ -89,7 +89,7 @@ export default function DictRequest() {
                   window.open('https://qwertylearner.ai', '_blank')
                   onClosePanel()
                 }}
-                className="mt-4 w-full transform rounded-lg bg-gradient-to-r from-blue-500 to-purple-600 px-4 py-2 text-sm font-semibold text-white transition-all duration-200 hover:scale-105 hover:from-blue-600 hover:to-purple-700 hover:shadow-lg focus:outline-none focus:ring-2 focus:ring-blue-500 focus:ring-offset-2"
+                className="mt-4 w-full transform rounded-lg bg-gradient-to-r from-brand-500 to-brand-600 px-4 py-2 text-sm font-semibold text-white transition-all duration-200 hover:scale-105 hover:from-brand-600 hover:to-brand-700 hover:shadow-lg focus:outline-none focus:ring-2 focus:ring-brand-500 focus:ring-offset-2"
               >
                 🚀 体验 QwertyLearner.ai
               </button>
@@ -107,7 +107,7 @@ export default function DictRequest() {
       <button
         type="button"
         onClick={onOpenPanel}
-        className="group flex items-center space-x-2 rounded-lg border border-indigo-200 bg-gradient-to-r from-indigo-50 to-blue-50 px-4 py-2.5 text-sm font-medium text-indigo-600 shadow-sm transition-all duration-200 hover:scale-105 hover:border-indigo-300 hover:from-indigo-100 hover:to-blue-100 hover:shadow-md focus:outline-none focus:ring-2 focus:ring-indigo-500 focus:ring-offset-2 dark:border-indigo-400 dark:from-gray-800 dark:to-gray-700 dark:text-indigo-400 dark:hover:from-gray-700 dark:hover:to-gray-600"
+        className="group flex items-center space-x-2 rounded-lg border border-brand-200 bg-gradient-to-r from-brand-50 to-blue-50 px-4 py-2.5 text-sm font-medium text-brand-600 shadow-sm transition-all duration-200 hover:scale-105 hover:border-brand-300 hover:from-brand-100 hover:to-blue-100 hover:shadow-md focus:outline-none focus:ring-2 focus:ring-brand-500 focus:ring-offset-2 dark:border-brand-400 dark:from-gray-800 dark:to-gray-700 dark:text-brand-400 dark:hover:from-gray-700 dark:hover:to-gray-600"
       >
         <IconBook2 className="h-4 w-4" />
         <span>寻找更多词典</span>

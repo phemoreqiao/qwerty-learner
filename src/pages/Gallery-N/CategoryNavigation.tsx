@@ -19,7 +19,7 @@ export default function CategoryNavigation({ titles = ['中国考试', '留学�
           >
             {({ checked }) => (
               <>
-                <div className={`mr-1 h-2.5 w-2.5 rounded-full ${checked ? 'bg-indigo-400' : 'bg-indigo-100'}`} />
+                <div className={`mr-1 h-2.5 w-2.5 rounded-full ${checked ? 'bg-brand-400' : 'bg-brand-100'}`} />
                 <RadioGroup.Label className="text-lg ">{title}</RadioGroup.Label>
               </>
             )}

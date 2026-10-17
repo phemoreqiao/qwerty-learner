@@ -133,7 +133,7 @@ export default function SharePicDialog({ showState, setShowState, randomChoose }
                             fill="none"
                             viewBox="0 0 24 24"
                           >
-                            <circle className="opacity-50" cx="12" cy="12" r="10" stroke="rgb(129 140 248)" strokeWidth="4"></circle>
+                            <circle className="opacity-50" cx="12" cy="12" r="10" stroke="rgb(245 138 69)" strokeWidth="4"></circle>
                             <path
                               className="opacity-75"
                               fill="currentColor"
@@ -164,7 +164,7 @@ export default function SharePicDialog({ showState, setShowState, randomChoose }
         <div ref={imageRef} className=" box-content w-85 bg-white p-4">
           <div
             className="relative flex h-112 w-75 flex-col items-start justify-start rounded-xl shadow-lg"
-            style={{ backgroundColor: '#F8F8FF' }}
+            style={{ backgroundColor: '#fffaf5' }}
           >
             <div className=" w-full ">
               <KeyboardPanel description={promote.word} />
